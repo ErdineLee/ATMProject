@@ -1,5 +1,10 @@
 package userInterface;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
 import java.util.Scanner;
 
 import dataManipulator.DataManipulator;
@@ -71,8 +76,6 @@ public class UserInterface {
 			break;
 		case 3:
 			HavaleYap.havaleYap();
-			
-			
 			break;
 		case 4:
 			EFTYap.eftYap();
@@ -105,6 +108,8 @@ public class UserInterface {
 		int miktar = sc4.nextInt();
 		sc4.close();
 		hesabaParaYatırılıyor(miktar);
+		System.out.println("Hesabınıza " + miktar + "Lira yatırılıyor.");
+
 	}
 	
 	private static void paraCek() {
@@ -119,7 +124,7 @@ public class UserInterface {
 		if(miktar <= Integer.parseInt(data[3])) {
 			System.out.println("Hesabınızdan " + miktar + "çekiliyor.");
 			hesaptanParaCekiliyor(miktar);
-			paraGoruntule();
+			//paraGoruntule();
 			System.out.println("İşlem tamamlandı. \nKartınızı almayı unutmayınız. ");
 		}
 		else if (!(miktar <= Integer.parseInt(data[3])) && miktar > 0){
@@ -131,30 +136,34 @@ public class UserInterface {
 		}
 	}
 	
-//	private static void havaleYap() {
-//		System.out.println("Lütfen havale yapılacak miktarı giriniz: ");
-//		Scanner sc6 = new Scanner(System.in);
-//		int miktar = sc6.nextInt();
-//		sc6.close();
-//		hesaptanParaCekiliyor(miktar);
-//		fakeMail();
-//	}
-	
-//	private static void eftYap() {
-//		System.out.println("Lütfen EFT yapılacak miktarı giriniz: ");
-//		Scanner sc7 = new Scanner(System.in);
-//		int miktar = sc7.nextInt();
-//		sc7.close();
-//		hesaptanParaCekiliyor(miktar);
-//		fakeMail();
-//	}
 	
 	private static void hesabaParaYatırılıyor(int miktar) {
-		
+		try (FileWriter f = new FileWriter("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\logs.txt", true); 
+				BufferedWriter b = new BufferedWriter(f); 
+				PrintWriter p = new PrintWriter(b);) 
+		{ 	
+			p.println("\n\nPara Yatırma İşlemi:");
+			Date currentTime = new Date();
+			p.println(currentTime.toString());
+			p.println(miktar+ " Lira tutarındaki para yatırma işlemi başarıyla gerçekleştirilmiştir.");  
+		} catch (IOException i) {
+			i.printStackTrace(); 
+		}
 	}
 	
 	public static void hesaptanParaCekiliyor(int miktar) {
 		DataManipulator.dataManipulator(miktar);
+		try (FileWriter f = new FileWriter("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\logs.txt", true); 
+				BufferedWriter b = new BufferedWriter(f); 
+				PrintWriter p = new PrintWriter(b);) 
+		{ 	
+			p.println("\n\nPara Çekme İşlemi:");
+			Date currentTime = new Date();
+			p.println(currentTime.toString());
+			p.println(miktar+ " Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.");
+		} catch (IOException i) {
+			i.printStackTrace(); 
+		}
 	}
 	
 	public static void fakeMail() {

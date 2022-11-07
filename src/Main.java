@@ -10,6 +10,6 @@ public class Main {
 		UserInterface.girisEkranı();
 		UserInterface.islemEkranı();
 		//DataManipulator.dataManipulator();
-		Logger.log();
+		//Logger.log();
 	}
 }

@@ -1,6 +1,20 @@
-appending text into file
-Gaura
-Bori
-appending text into file
-Gaura
-Bori
+
+
+Para Çekme İşlemi:
+Mon Nov 07 09:00:23 TRT 2022
+75Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.
+
+
+Havale İşlemi:
+Mon Nov 07 09:00:23 TRT 2022
+75Lira tutarındaki havale işlemi başarıyla gerçekleştirilmiştir.
+
+
+Para Çekme İşlemi:
+Mon Nov 07 09:01:32 TRT 2022
+500 Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.
+
+
+Havale İşlemi:
+Mon Nov 07 09:01:32 TRT 2022
+500Lira tutarındaki EFT işlemi başarıyla gerçekleştirilmiştir.

@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import retrieveData.Accounts;
 import retrieveData.RetrieveData;
 import userInterface.UserInterface;
 import dataManipulator.DataManipulator;
@@ -9,7 +11,10 @@ public class Main {
 		UserInterface.karsilamaEkranı();
 		UserInterface.girisEkranı();
 		UserInterface.islemEkranı();
-		//DataManipulator.dataManipulator();
-		//Logger.log();
+		System.exit(0);
+		//To create another account
+		//Accounts account1 = new Accounts();
+		//account1.getAccountsFromFile();
+		//System.out.println(account1._username);
 	}
 }

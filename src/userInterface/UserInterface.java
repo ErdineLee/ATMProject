@@ -52,14 +52,16 @@ public class UserInterface {
 	
 	public static void islemEkranı() {
 		System.out.println("Lütfen yapmak istediginiz islemi giriniz...");
-		System.out.println("Para görüntülemek için 0");
-		System.out.println("Para yatırmak için 1");
-		System.out.println("Para çekmek için 2");
-		System.out.println("Havale yapmak için 3");
-		System.out.println("EFT yapmak için 4");
-		System.out.println("Fake Mail() için 5");
-		System.out.println("Çıkış yapmak için 6");
-		
+		System.out.println("------------------------------");
+		System.out.println("-  Para görüntülemek için 0  -");
+		System.out.println("-  Para yatırmak için 1      -");
+		System.out.println("-  Para çekmek için 2        -");
+		System.out.println("-  Havale yapmak için 3      -");
+		System.out.println("-  EFT yapmak için 4         -");
+		System.out.println("-  Fake Mail() için 5        -");
+		System.out.println("-  Çıkış yapmak için 6       -");
+		System.out.println("------------------------------");
+
 		Scanner sc2 = new Scanner(System.in);
 		int secenek = sc2.nextInt();
 		//sc2.close();
@@ -79,7 +81,6 @@ public class UserInterface {
 			break;
 		case 4:
 			EFTYap.eftYap();
-			//EFTYap
 			break;
 		case 5:
 			fakeMail();
@@ -87,12 +88,30 @@ public class UserInterface {
 		case 6:
 			System.out.println("İşleminiz sonlandırılmıştır.");
 			System.out.println("Çıkış yapılıyor.");
+			System.out.println("--------------------------");
 			System.exit(0);
 			break;
 		default:
 			System.out.println("Lütfen listedeki seceneklerden birini giriniz.");
 			System.out.println("İşleminiz sonlandırılmıştır.");
+			System.out.println("--------------------------");
 			break;
+		}
+	}
+	
+	public static void paraGoruntuleLog() {
+		String[] data = new String[10];
+		data = RetrieveData.DataRetriever();
+		
+		try (FileWriter f = new FileWriter("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\logs.txt", true); 
+				BufferedWriter b = new BufferedWriter(f); 
+				PrintWriter p = new PrintWriter(b);) 
+		{ 	
+			p.println("Hesapta " + data[3] + " Lira bakiye bulunmaktadır.");
+			p.println("--------------------------");
+
+		} catch (IOException i) {
+			i.printStackTrace(); 
 		}
 	}
 	
@@ -110,6 +129,8 @@ public class UserInterface {
 		hesabaParaYatırılıyor(miktar);
 		System.out.println("Hesabınıza " + miktar + " Lira yatırılıyor.");
 		System.out.println("İşlem tamamlandı. \nKartınızı almayı unutmayınız. ");
+		paraGoruntuleLog();
+		System.exit(0);
 
 	}
 	
@@ -135,6 +156,8 @@ public class UserInterface {
 		else {
 			System.out.println("Lütfen doğru bir miktar giriniz.");
 		}
+		paraGoruntuleLog();
+		System.exit(0);
 	}
 	
 	

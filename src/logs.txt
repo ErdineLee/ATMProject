@@ -1,0 +1,44 @@
+
+
+Para Çekme İşlemi:
+Mon Nov 07 23:24:45 TRT 2022
+60 Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.
+
+
+Para Yatırma İşlemi:
+Mon Nov 07 23:25:15 TRT 2022
+500 Lira tutarındaki para yatırma işlemi başarıyla gerçekleştirilmiştir.
+
+
+Para Çekme İşlemi:
+Mon Nov 07 23:31:18 TRT 2022
+150 Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.
+Hesapta 740Lira bakiye bulunmaktadır.
+
+
+Para Çekme İşlemi:
+Mon Nov 07 23:31:59 TRT 2022
+150 Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.
+
+
+Havale İşlemi:
+Mon Nov 07 23:31:59 TRT 2022
+150 Lira tutarındaki havale işlemi başarıyla gerçekleştirilmiştir.
+
+
+Para Çekme İşlemi:
+Mon Nov 07 23:36:01 TRT 2022
+150 Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.
+Hesapta 440 Lira bakiye bulunmaktadır.
+
+
+Para Çekme İşlemi:
+Mon Nov 07 23:40:48 TRT 2022
+200 Lira tutarındaki para çekme işlemi başarıyla gerçekleştirilmiştir.
+Hesapta 240 Lira bakiye bulunmaktadır.
+--------------------------
+
+
+Havale İşlemi:
+Mon Nov 07 23:40:48 TRT 2022
+200 Lira tutarındaki havale işlemi başarıyla gerçekleştirilmiştir.

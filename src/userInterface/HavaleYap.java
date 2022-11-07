@@ -23,7 +23,8 @@ public class HavaleYap implements IFakeMail{
 			p.println("\n\nHavale İşlemi:");
 			Date currentTime = new Date();
 			p.println(currentTime.toString());
-			p.println(miktar+ " Lira tutarındaki havale işlemi başarıyla gerçekleştirilmiştir.");  
+			p.println(miktar+ " Lira tutarındaki havale işlemi başarıyla gerçekleştirilmiştir.");
+			UserInterface.paraGoruntuleLog();
 		} catch (IOException i) {
 			i.printStackTrace(); 
 		}	

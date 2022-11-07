@@ -28,7 +28,7 @@ public class DataManipulator {
         
         for (i = 0; i < 4; i++) {        
         	if(i==3) {
-            	str2 = tutucu.nextToken();// - Integer.toString(para) ;
+            	str2 = tutucu.nextToken();
             	System.out.println(str2);
             	int a = Integer.parseInt(str2);  
             	a = a-para;
@@ -42,30 +42,14 @@ public class DataManipulator {
         str = str.substring(0, 33);
         str = str + s;
         
-        //fw.append("a");
-
         fr.close();
-
         FileWriter fw = new FileWriter("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\deneme.txt");
-
         fw.write(str);
-
         fw.close();
-        
-        
-        
-        //System.out.println(
-        //    "File reading and writing both done");
     }
 
-    // Catch block to handle the exception
     catch (IOException e) {
 
-        // If there is no file in specified path or
-        // any other error occurred during runtime
-        // then it will print IOException
-
-        // Display message
         System.out.println(
             "There are some IOException");
     }

@@ -108,7 +108,8 @@ public class UserInterface {
 		int miktar = sc4.nextInt();
 		sc4.close();
 		hesabaParaYatırılıyor(miktar);
-		System.out.println("Hesabınıza " + miktar + "Lira yatırılıyor.");
+		System.out.println("Hesabınıza " + miktar + " Lira yatırılıyor.");
+		System.out.println("İşlem tamamlandı. \nKartınızı almayı unutmayınız. ");
 
 	}
 	
@@ -122,7 +123,7 @@ public class UserInterface {
 		sc5.close();
 		
 		if(miktar <= Integer.parseInt(data[3])) {
-			System.out.println("Hesabınızdan " + miktar + "çekiliyor.");
+			System.out.println("Hesabınızdan " + miktar + " çekiliyor.");
 			hesaptanParaCekiliyor(miktar);
 			//paraGoruntule();
 			System.out.println("İşlem tamamlandı. \nKartınızı almayı unutmayınız. ");
@@ -138,6 +139,8 @@ public class UserInterface {
 	
 	
 	private static void hesabaParaYatırılıyor(int miktar) {
+		DataManipulator.dataManipulator(-miktar);
+
 		try (FileWriter f = new FileWriter("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\logs.txt", true); 
 				BufferedWriter b = new BufferedWriter(f); 
 				PrintWriter p = new PrintWriter(b);) 

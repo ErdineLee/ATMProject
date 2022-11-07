@@ -3,6 +3,7 @@ package dataManipulator;
 import java.io.BufferedReader;
 import java.io.*;
 import java.io.FileReader;
+import java.util.StringTokenizer;
 
 public class DataManipulator {
 	public static void dataManipulator(int para) {
@@ -10,9 +11,9 @@ public class DataManipulator {
 	
         FileReader fr = new FileReader("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\deneme.txt");
 
-        FileWriter fw = new FileWriter("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\deneme1.txt");
 
         String str = "";
+        String str2 = "";
         int i;
         // Condition check
         // Reading the file using read() method which
@@ -20,12 +21,39 @@ public class DataManipulator {
         while ((i = fr.read()) != -1) {
             str += (char)i;
         }
-        fw.write(str);
-        fw.append("a");
+        
+        StringTokenizer tutucu = new StringTokenizer(str);
+        
+        String s = "";
+        
+        for (i = 0; i < 4; i++) {        
+        	if(i==3) {
+            	str2 = tutucu.nextToken();// - Integer.toString(para) ;
+            	System.out.println(str2);
+            	int a = Integer.parseInt(str2);  
+            	a = a-para;
+            	s = Integer.toString(a);
+            }
+        	else {
+                str2 = tutucu.nextToken();
+        	}
+        }
+        System.out.println(s);
+        str = str.substring(0, 33);
+        str = str + s;
+        
+        //fw.append("a");
 
         fr.close();
-        fw.close();
 
+        FileWriter fw = new FileWriter("C:\\Users\\erdi.ozyildirim\\eclipse-workspace\\ATMProject\\src\\deneme.txt");
+
+        fw.write(str);
+
+        fw.close();
+        
+        
+        
         //System.out.println(
         //    "File reading and writing both done");
     }
